@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.sqr-outer{
+  /* background-color: slateblue; */
+}
+
+.sqr-inner{
+  /* background-color: skyblue; */
+  padding: 2px;
+}
+
+.sqr-content{
+  /* background-color: antiquewhite; */
+}
