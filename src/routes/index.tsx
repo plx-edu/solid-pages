@@ -25,6 +25,10 @@ export default function Home() {
         <A href="/about" class="text-sky-600 hover:underline">
           About Page
         </A>{" "}
+
+        <A href="about" class="text-sky-600 hover:underline">
+          About Page Without Slash
+        </A>{" "}
       </p>
     </main>
   );
