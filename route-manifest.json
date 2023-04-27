@@ -2,11 +2,11 @@
   "/*404": [
     {
       "type": "script",
-      "href": "/solid-pages/assets/_...404_-7ab9aa30.js"
+      "href": "/solid-pages/assets/_...404_-7d159532.js"
     },
     {
       "type": "script",
-      "href": "/solid-pages/assets/entry-client-14ab43b7.js"
+      "href": "/solid-pages/assets/entry-client-59503c2e.js"
     },
     {
       "type": "style",
@@ -16,11 +16,11 @@
   "/about": [
     {
       "type": "script",
-      "href": "/solid-pages/assets/about-1cfcdd1c.js"
+      "href": "/solid-pages/assets/about-9ca12fdb.js"
     },
     {
       "type": "script",
-      "href": "/solid-pages/assets/entry-client-14ab43b7.js"
+      "href": "/solid-pages/assets/entry-client-59503c2e.js"
     },
     {
       "type": "style",
@@ -28,17 +28,17 @@
     },
     {
       "type": "script",
-      "href": "/solid-pages/assets/Counter-e46545af.js"
+      "href": "/solid-pages/assets/Counter-90bb5689.js"
     }
   ],
   "/": [
     {
       "type": "script",
-      "href": "/solid-pages/assets/index-26eb5bfb.js"
+      "href": "/solid-pages/assets/index-270d0dc1.js"
     },
     {
       "type": "script",
-      "href": "/solid-pages/assets/entry-client-14ab43b7.js"
+      "href": "/solid-pages/assets/entry-client-59503c2e.js"
     },
     {
       "type": "style",
@@ -46,13 +46,13 @@
     },
     {
       "type": "script",
-      "href": "/solid-pages/assets/Counter-e46545af.js"
+      "href": "/solid-pages/assets/Counter-90bb5689.js"
     }
   ],
   "entry-client": [
     {
       "type": "script",
-      "href": "/solid-pages/assets/entry-client-14ab43b7.js"
+      "href": "/solid-pages/assets/entry-client-59503c2e.js"
     },
     {
       "type": "style",

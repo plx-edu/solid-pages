@@ -36,7 +36,7 @@
   "node_modules/solid-start/server/types.tsx": [
   ],
   "src/components/Counter.tsx": [
-    "/solid-pages/assets/Counter-e46545af.js"
+    "/solid-pages/assets/Counter-90bb5689.js"
   ],
   "src/entry-client.tsx": [
   ],
@@ -45,12 +45,12 @@
   "src/root.tsx": [
   ],
   "src/routes/[...404].tsx": [
-    "/solid-pages/assets/_...404_-7ab9aa30.js"
+    "/solid-pages/assets/_...404_-7d159532.js"
   ],
   "src/routes/about.tsx": [
-    "/solid-pages/assets/about-1cfcdd1c.js"
+    "/solid-pages/assets/about-9ca12fdb.js"
   ],
   "src/routes/index.tsx": [
-    "/solid-pages/assets/index-26eb5bfb.js"
+    "/solid-pages/assets/index-270d0dc1.js"
   ]
 }
