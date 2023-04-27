@@ -1,3 +1,5 @@
+import Square from "../components/Square";
+
 export default function Layout() {
   return (
     <main class="text-center mx-auto text-gray-700 p-4">
@@ -7,6 +9,14 @@ export default function Layout() {
       <p class="mt-8">
         [Insert content here]
       </p>
+
+      <div class="w-5">
+      <Square>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width={1.5} stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+        </svg>
+      </Square>
+      </div>
     </main>
   );
 }
