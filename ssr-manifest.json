@@ -1,0 +1,56 @@
+{
+  "\u0000vite/preload-helper": [
+  ],
+  "node_modules/@solidjs/meta/dist/index.jsx": [
+  ],
+  "node_modules/@solidjs/router/dist/components.jsx": [
+  ],
+  "node_modules/@solidjs/router/dist/integration.js": [
+  ],
+  "node_modules/@solidjs/router/dist/lifecycle.js": [
+  ],
+  "node_modules/@solidjs/router/dist/routing.js": [
+  ],
+  "node_modules/@solidjs/router/dist/utils.js": [
+  ],
+  "node_modules/solid-js/dist/solid.js": [
+  ],
+  "node_modules/solid-js/web/dist/web.js": [
+  ],
+  "node_modules/solid-start/entry-client/StartClient.tsx": [
+  ],
+  "node_modules/solid-start/entry-client/mount.tsx": [
+  ],
+  "node_modules/solid-start/error-boundary/ErrorBoundary.tsx": [
+  ],
+  "node_modules/solid-start/root/Document.tsx": [
+  ],
+  "node_modules/solid-start/root/FileRoutes.tsx": [
+  ],
+  "node_modules/solid-start/root/Scripts.tsx": [
+  ],
+  "node_modules/solid-start/router.tsx": [
+  ],
+  "node_modules/solid-start/server/ServerContext.tsx": [
+  ],
+  "node_modules/solid-start/server/types.tsx": [
+  ],
+  "src/components/Counter.tsx": [
+    "/solid-pages/assets/Counter-e46545af.js"
+  ],
+  "src/entry-client.tsx": [
+  ],
+  "src/root.css": [
+  ],
+  "src/root.tsx": [
+  ],
+  "src/routes/[...404].tsx": [
+    "/solid-pages/assets/_...404_-7ab9aa30.js"
+  ],
+  "src/routes/about.tsx": [
+    "/solid-pages/assets/about-1cfcdd1c.js"
+  ],
+  "src/routes/index.tsx": [
+    "/solid-pages/assets/index-26eb5bfb.js"
+  ]
+}
