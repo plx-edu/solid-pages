@@ -36,10 +36,10 @@
   "node_modules/solid-start/server/types.tsx": [
   ],
   "src/components/Counter.tsx": [
-    "/solid-pages/assets/Counter-3dabfd03.js"
+    "/solid-pages/assets/Counter-ca419824.js"
   ],
   "src/components/Square.tsx": [
-    "/solid-pages/assets/layout-b2468d4e.js"
+    "/solid-pages/assets/layout-2ec4961d.js"
   ],
   "src/entry-client.tsx": [
   ],
@@ -48,15 +48,15 @@
   "src/root.tsx": [
   ],
   "src/routes/[...404].tsx": [
-    "/solid-pages/assets/_...404_-8ef8b84f.js"
+    "/solid-pages/assets/_...404_-7a274fad.js"
   ],
   "src/routes/about.tsx": [
-    "/solid-pages/assets/about-d6fed1f3.js"
+    "/solid-pages/assets/about-c91d015b.js"
   ],
   "src/routes/index.tsx": [
-    "/solid-pages/assets/index-582f88dc.js"
+    "/solid-pages/assets/index-1564a907.js"
   ],
   "src/routes/layout.tsx": [
-    "/solid-pages/assets/layout-b2468d4e.js"
+    "/solid-pages/assets/layout-2ec4961d.js"
   ]
 }
