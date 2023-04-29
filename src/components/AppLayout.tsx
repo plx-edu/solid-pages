@@ -11,8 +11,8 @@ export default function AppLayout(props: any) {
     <section class="
       w-screen h-full
       flex flex-col
-      justify-between pt-0.5
-      bg-slate-600">
+      justify-between pt-0.5"
+    >
       <div class="w-full z-40
         fixed top-0 left-0 right-0 
         border-t-2 border-rose-600"
