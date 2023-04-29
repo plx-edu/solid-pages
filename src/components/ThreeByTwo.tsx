@@ -12,7 +12,7 @@ export default function Square(props: any) {
           text-slate-400
           bg-gradient-to-br from-slate-50 to-slate-100"
         >
-          <AddButton bgUrl="https://cdnb.artstation.com/p/assets/images/images/028/377/999/large/dyzi-nlizi-10-logo.jpg?1594298406">
+          <AddButton>
             {props.children}
           </AddButton>
         </div>
