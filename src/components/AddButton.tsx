@@ -2,7 +2,8 @@ export default function AddButton(props: any) {
   return (
     <button class="flex justify-center items-center
       w-full h-full relative
-      hover:bg-gradient-to-b from-slate-100 to-slate-200"
+      text-rose-800  hover:text-white hover:font-semibold
+      hover:bg-rose-800 border-t-2 hover:border-rose-800"
     >
       {props.children}
     </button>

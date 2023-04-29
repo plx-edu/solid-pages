@@ -3,25 +3,20 @@ import { A, useLocation } from "solid-start";
 export default function AppLayout(props: any) {
   const location = useLocation();
   const active = (path: string) => {
-    console.log(1, path, location.pathname);
-    console.log(2, path, location.hash);
-    console.log(3, path, location.key);
-    console.log(4, path, location.search);
-    console.log("::::::::::");
-    
     return "/solid-pages"+path === location.pathname
-      ? "border-slate-700 bg-slate-600/50 font-medium"
-      : "border-transparent hover:border-slate-700 hover:bg-slate-600/[.25]"};
+      ? "border-b-4 border-rose-800 font-semibold text-rose-800 bg-slate-200"
+      : "border-b-4 border-transparent hover:border-slate-200 hover:font-medium"
+  };
 
   return (
     <section class="
       w-screen h-full
-      flex flex-col font-
+      flex flex-col
       justify-between pt-0.5"
     >
       <div class="w-full z-40
         fixed top-0 left-0 right-0 
-        border-t-2 border-slate-500"
+        border-t-2 border-rose-800"
       >
       </div>
 
@@ -31,16 +26,19 @@ export default function AppLayout(props: any) {
 
       <nav class="flex flex-row
         sticky bottom-0 left-0 right-0
-        bg-gradient-to-b from-slate-500 to-slate-600"
+        bg-slate-200"
       >
-        <ul class="flex w-full h-10 text-gray-100">
-          <li class={`w-full border-t-4 ${active("/")}`}>
+        <ul class="flex w-full h-10
+          border-t border-rose-800 text-slate-200
+          bg-rose-800
+        ">
+          <li class={`w-full ${active("/")}`}>
             <A class="flex w-full h-full justify-center items-center" href="/">Home</A>
           </li>
-          <li class={`w-full h-full border-t-4 ${active("/about")}`}>
+          <li class={`w-full h-full ${active("/about")}`}>
             <A class="flex w-full h-full justify-center items-center" href="../about">About</A>
           </li>
-          <li class={`w-full h-full bg-blue border-t-4 ${active("/layout")}`}
+          <li class={`w-full h-full ${active("/layout")}`}
           >
             <A class="flex w-full h-full justify-center items-center" href="../layout" >Layout</A>
           </li>
