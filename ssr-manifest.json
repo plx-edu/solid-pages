@@ -35,25 +35,28 @@
   ],
   "node_modules/solid-start/server/types.tsx": [
   ],
+  "src/components/AddButton.tsx": [
+    "/solid-pages/assets/layout-7b36b1a5.js"
+  ],
   "src/components/AppLayout.tsx": [
   ],
   "src/components/Counter.tsx": [
-    "/solid-pages/assets/Counter-bdeacc47.js"
+    "/solid-pages/assets/Counter-f715c6f6.js"
   ],
   "src/components/FourByOne.tsx": [
-    "/solid-pages/assets/layout-9853cd0b.js"
+    "/solid-pages/assets/layout-7b36b1a5.js"
   ],
   "src/components/Square.tsx": [
-    "/solid-pages/assets/layout-9853cd0b.js"
+    "/solid-pages/assets/layout-7b36b1a5.js"
   ],
   "src/components/ThreeByTwo.tsx": [
-    "/solid-pages/assets/layout-9853cd0b.js"
+    "/solid-pages/assets/layout-7b36b1a5.js"
   ],
   "src/components/TwoByOne.tsx": [
-    "/solid-pages/assets/layout-9853cd0b.js"
+    "/solid-pages/assets/layout-7b36b1a5.js"
   ],
   "src/components/TwoByThree.tsx": [
-    "/solid-pages/assets/layout-9853cd0b.js"
+    "/solid-pages/assets/layout-7b36b1a5.js"
   ],
   "src/entry-client.tsx": [
   ],
@@ -62,15 +65,15 @@
   "src/root.tsx": [
   ],
   "src/routes/[...404].tsx": [
-    "/solid-pages/assets/_...404_-6eefd341.js"
+    "/solid-pages/assets/_...404_-89048d5f.js"
   ],
   "src/routes/about.tsx": [
-    "/solid-pages/assets/about-b41b8624.js"
+    "/solid-pages/assets/about-7c7709b1.js"
   ],
   "src/routes/index.tsx": [
-    "/solid-pages/assets/index-0e7e7cf9.js"
+    "/solid-pages/assets/index-8eabfbb4.js"
   ],
   "src/routes/layout.tsx": [
-    "/solid-pages/assets/layout-9853cd0b.js"
+    "/solid-pages/assets/layout-7b36b1a5.js"
   ]
 }
