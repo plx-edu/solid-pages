@@ -15,7 +15,7 @@ export default function AppLayout(props: any) {
     >
       <div class="w-full z-40
         fixed top-0 left-0 right-0 
-        border-t-2 border-rose-600"
+        border-t-2 border-slate-500"
       >
       </div>
 
@@ -23,7 +23,11 @@ export default function AppLayout(props: any) {
         {props.children}
       </section>
 
-      <nav class="bg-rose-700">
+      <nav class="
+        flex flex-row
+        sticky bottom-0 left-0 right-0
+        bg-gradient-to-b from-slate-500 to-slate-600"
+      >
         <ul class="container flex items-center p-3 text-gray-200">
           <li class={`border-b-2 ${active("/")} mx-1.5 sm:mx-6`}>
             <A href="/">Home</A>
@@ -35,6 +39,7 @@ export default function AppLayout(props: any) {
             <A href="../layout" >Layout</A>
           </li>
         </ul>
+        <p>BOOM</p>
       </nav>
     </section>
   );

@@ -16,7 +16,7 @@ export default function Layout() {
 
   return (
     <>
-      <section id="about_section" class="w-full">
+      <section id="layout_section" class="w-full">
 
           <div id="row_0" class="flex flex-row w-full">
             {

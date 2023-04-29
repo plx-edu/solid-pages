@@ -22,13 +22,13 @@ export default function Home() {
       <p class="my-4">
         <span>Home</span>
         {" - "}
-        <a href="/about" class="text-sky-600 hover:underline">
+        <A href="/about" class="text-sky-600 hover:underline">
           About Page
-        </a>{" "}
+        </A>
         {" - "}
-        <a href="about/" class="text-sky-600 hover:underline">
-          About Page With Trailing Slash
-        </a>{" "}
+        <A href="/layout" class="text-sky-600 hover:underline">
+          Layout Page
+        </A>
       </p>
     </main>
   );
