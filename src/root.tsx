@@ -16,13 +16,13 @@ import AppLayout from "./components/AppLayout";
 
 export default function Root() {
   return (
-    <Html lang="en">
+    <Html lang="en" class="">
       <Head>
         <Title>:: Solid Pages ::</Title>
         <Meta charset="utf-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Body>
+      <Body class="absolute top-0 bottom-0 left-0 right-0">
         <Suspense>
           <ErrorBoundary>
             <AppLayout>
