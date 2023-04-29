@@ -2,11 +2,11 @@
   "/*404": [
     {
       "type": "script",
-      "href": "/solid-pages/assets/_...404_-5811c628.js"
+      "href": "/solid-pages/assets/_...404_-6eefd341.js"
     },
     {
       "type": "script",
-      "href": "/solid-pages/assets/entry-client-3c6abc36.js"
+      "href": "/solid-pages/assets/entry-client-f0f81195.js"
     },
     {
       "type": "style",
@@ -16,11 +16,11 @@
   "/about": [
     {
       "type": "script",
-      "href": "/solid-pages/assets/about-027770e2.js"
+      "href": "/solid-pages/assets/about-b41b8624.js"
     },
     {
       "type": "script",
-      "href": "/solid-pages/assets/entry-client-3c6abc36.js"
+      "href": "/solid-pages/assets/entry-client-f0f81195.js"
     },
     {
       "type": "style",
@@ -28,17 +28,17 @@
     },
     {
       "type": "script",
-      "href": "/solid-pages/assets/Counter-9e770ecc.js"
+      "href": "/solid-pages/assets/Counter-bdeacc47.js"
     }
   ],
   "/": [
     {
       "type": "script",
-      "href": "/solid-pages/assets/index-43d2974d.js"
+      "href": "/solid-pages/assets/index-0e7e7cf9.js"
     },
     {
       "type": "script",
-      "href": "/solid-pages/assets/entry-client-3c6abc36.js"
+      "href": "/solid-pages/assets/entry-client-f0f81195.js"
     },
     {
       "type": "style",
@@ -46,17 +46,17 @@
     },
     {
       "type": "script",
-      "href": "/solid-pages/assets/Counter-9e770ecc.js"
+      "href": "/solid-pages/assets/Counter-bdeacc47.js"
     }
   ],
   "/layout": [
     {
       "type": "script",
-      "href": "/solid-pages/assets/layout-595b9f67.js"
+      "href": "/solid-pages/assets/layout-9853cd0b.js"
     },
     {
       "type": "script",
-      "href": "/solid-pages/assets/entry-client-3c6abc36.js"
+      "href": "/solid-pages/assets/entry-client-f0f81195.js"
     },
     {
       "type": "style",
@@ -66,7 +66,7 @@
   "entry-client": [
     {
       "type": "script",
-      "href": "/solid-pages/assets/entry-client-3c6abc36.js"
+      "href": "/solid-pages/assets/entry-client-f0f81195.js"
     },
     {
       "type": "style",
