@@ -4,7 +4,7 @@ export default function Content(props: any) {
       flex justify-center items-center
       h-full w-full
       overflow-hidden
-      border rounded-sm border-rose-800"
+      border rounded-sm border-gray-800"
     >
       {props.children}
     </div>
