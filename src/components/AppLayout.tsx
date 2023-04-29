@@ -3,7 +3,7 @@ import { A, useLocation } from "solid-start";
 export default function AppLayout(props: any) {
   const location = useLocation();
   const active = (path: string) => {
-    return path === location.pathname
+    return "/solid-pages"+path === location.pathname || "/solid-pages/"+path === location.pathname
       ? "border-b-4 border-gray-800 font-semibold text-gray-800 bg-slate-200"
       : "border-b-4 border-transparent hover:border-slate-200 hover:font-medium"
   };
