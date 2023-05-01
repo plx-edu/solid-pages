@@ -1,4 +1,4 @@
-import { createSignal } from "solid-js";
+import { createEffect, createSignal } from "solid-js";
 import { useHref } from "solid-start";
 
 const artstationCDNA = "https://cdna.artstation.com/p/assets/images/images";
@@ -7,6 +7,13 @@ const artstationCDNB = "https://cdnb.artstation.com/p/assets/images/images";
 export default function AddButton(props: any) {
   const [bgImage, setBgImage] = createSignal("");
   const [isInputVisible, setIsInputVisible] = createSignal(false);
+  let inputRef: HTMLInputElement;
+
+  createEffect(() => {
+    if(isInputVisible()){
+      inputRef.focus();
+    }
+  });
 
   function setBackgroundImage (e: any){
     // console.log(e.key);
@@ -27,8 +34,10 @@ export default function AddButton(props: any) {
           <div class="">
             <input type="text"
               class="w-full"
+              ref={inputRef!}
               onkeypress={(e) => setBackgroundImage(e)}
               onClick={(e) => e.stopPropagation()}
+              onFocusOut={() => setIsInputVisible(false)}
             />
           </div>
         </button> : <></>
@@ -39,7 +48,7 @@ export default function AddButton(props: any) {
         text-gray-800  hover:text-white hover:font-extrabold
         border-t-2 border-transparent
         hover:bg-gray-800 hover:border-slate-50
-        bg-center bg-cover bg-no-repeat ${bgImage() ? "bg-[url('"+bgImage()+"')]" : "bg-[url('')]"}`}
+        bg-center bg-cover bg-no-repeat`}
         onClick={() => setIsInputVisible(!isInputVisible())}
         style={{"background-image": "url('"+bgImage()+"')"}}
       >
