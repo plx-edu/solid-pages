@@ -1,7 +1,8 @@
 import { createSignal } from "solid-js";
 import { useHref } from "solid-start";
 
-const artstationCDN = "https://cdna.artstation.com/p/assets/images/images";
+const artstationCDNA = "https://cdna.artstation.com/p/assets/images/images";
+const artstationCDNB = "https://cdnb.artstation.com/p/assets/images/images";
 
 export default function AddButton(props: any) {
   const [bgImage, setBgImage] = createSignal("");
@@ -11,7 +12,7 @@ export default function AddButton(props: any) {
     // console.log(e.key);
     if(e.key === "Enter"){
       const url = e.currentTarget.value.trim();
-      setBgImage(url.startsWith(artstationCDN) ? url : "")
+      setBgImage(url.startsWith(artstationCDNA) || url.startsWith(artstationCDNA) ? url : "")
     }
   }
 
