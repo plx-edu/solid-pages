@@ -47,9 +47,3 @@ export default function AddButton(props: any) {
     </>
   );
 }
-
-/*
-background-position: center;
-background-size: cover;
-background-image: url("https://cdna.artstation.com/p/assets/images/images/060/726/560/large/angel-moonlight-profesorafinal-glazed-intensity1-render1.jpg?1679190779");
-*/
