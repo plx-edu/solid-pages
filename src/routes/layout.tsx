@@ -3,6 +3,7 @@ import FourByOne from "../components/FourByOne";
 import ThreeByTwo from "../components/ThreeByTwo";
 import TwoByOne from "../components/TwoByOne";
 import TwoByThree from "../components/TwoByThree";
+import ThreeByOne from "../components/ThreeByOne";
 
 export default function Layout() {
   const arrOfFive = [1,2,3,4,5];
@@ -99,6 +100,20 @@ export default function Layout() {
                 <TwoByThree> 
                   {PlusSVG()}
                 </TwoByThree>
+            </div>
+          </div>
+
+          <div id="row_4" class="flex flex-row w-full">
+            <div class="w-2/5">
+              <TwoByOne>
+                {PlusSVG()}
+              </TwoByOne> 
+            </div>
+
+            <div class="w-3/5">
+              <ThreeByOne>
+                {PlusSVG()}
+              </ThreeByOne>
             </div>
           </div>
       </section>
