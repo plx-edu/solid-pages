@@ -12,7 +12,7 @@ export default function AddButton(props: any) {
     // console.log(e.key);
     if(e.key === "Enter"){
       const url = e.currentTarget.value.trim();
-      setBgImage(url.startsWith(artstationCDNA) || url.startsWith(artstationCDNA) ? url : "")
+      setBgImage(url.startsWith(artstationCDNA) || url.startsWith(artstationCDNB) ? url : "")
     }
   }
 
