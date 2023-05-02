@@ -21,12 +21,12 @@ export default function AppLayout(props: any) {
       >
       </div>
 
-      <section id="content" class="">
+      <section id="content" class="pb-10">
         {props.children}
       </section>
 
       <nav class="flex flex-row z-50
-        sticky bottom-0 left-0 right-0
+        fixed bottom-0 left-0 right-0
         bg-slate-50"
       >
         <ul class="flex w-full h-10
