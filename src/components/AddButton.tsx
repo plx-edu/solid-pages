@@ -23,13 +23,6 @@ export default function AddButton(props: any) {
     }
   }
 
-  function getRandomCategory() {
-    const categories = ["random", "nature", "photography", "technology", "travel", "fashion-beauty", "food-drink", "arts-culture", "people"];
-    // 0 to max-1
-    const max = categories.length;
-    return categories[Math.floor(Math.random() * max)];
-  }
-
   return (
     <>
       {isInputVisible() ?
@@ -45,6 +38,7 @@ export default function AddButton(props: any) {
               onkeypress={(e) => setBackgroundImage(e)}
               onClick={(e) => e.stopPropagation()}
               onFocusOut={() => setIsInputVisible(false)}
+              placeholder="Paste image url and press enter (accepts artstation cdn)"
             />
           </div>
         </button> : <></>
@@ -56,7 +50,7 @@ export default function AddButton(props: any) {
         hover:bg-gray-800
         bg-center bg-cover bg-no-repeat`}
         onClick={() => setIsInputVisible(!isInputVisible())}
-        style={{"background-image": bgImage() ? "url('"+bgImage()+"')" : "url('https://source.unsplash.com/1600x900/?"+getRandomCategory()+"')"}}
+        style={{"background-image": "url('"+bgImage()+"')"}}
         >
         {/* style={{"background-image": "url('"+bgImage()+"')"}} */}
         {props.children}
