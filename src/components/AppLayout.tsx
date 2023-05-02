@@ -10,7 +10,7 @@ export default function AppLayout(props: any) {
 
   return (
     <section class="
-      w-screen h-full
+      w-screen
       flex flex-col
       text-gray-800 
       justify-between pt-0.5"

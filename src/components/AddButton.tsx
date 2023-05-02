@@ -29,7 +29,7 @@ export default function AddButton(props: any) {
         <button class="absolute z-10 p-2
         w-full h-full
         flex justify-center items-center
-        bg-black/[.75]"
+        bg-black/[.45]"
         onClick={() => setIsInputVisible(false)}>
           <div class="">
             <input type="text"
