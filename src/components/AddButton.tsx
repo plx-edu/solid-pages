@@ -38,7 +38,6 @@ export default function AddButton(props: any) {
               onkeypress={(e) => setBackgroundImage(e)}
               onClick={(e) => e.stopPropagation()}
               onFocusOut={() => setIsInputVisible(false)}
-              placeholder="Paste image url and press enter (accepts artstation cdn)"
             />
           </div>
         </button> : <></>

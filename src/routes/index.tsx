@@ -11,11 +11,11 @@ export default function Home() {
         <span>Home</span>
         {" - "}
         <A href="/about" class="text-sky-600 hover:underline">
-          About Page
+          About
         </A>
         {" - "}
         <A href="/layout" class="text-sky-600 hover:underline">
-          Layout Page
+          Layout
         </A>
       </p>
     </main>
