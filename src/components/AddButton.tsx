@@ -23,6 +23,13 @@ export default function AddButton(props: any) {
     }
   }
 
+  function getRandomCategory() {
+    const categories = ["random", "nature", "photography", "technology", "travel", "fashion-beauty", "food-drink", "arts-culture", "people"];
+    // 0 to max-1
+    const max = categories.length;
+    return categories[Math.floor(Math.random() * max)];
+  }
+
   return (
     <>
       {isInputVisible() ?
@@ -46,12 +53,12 @@ export default function AddButton(props: any) {
       <button class={`flex justify-center items-center
         w-full h-full relative
         text-gray-800  hover:text-white hover:font-extrabold
-        border-t-2 border-transparent
-        hover:bg-gray-800 hover:border-slate-50
+        hover:bg-gray-800
         bg-center bg-cover bg-no-repeat`}
         onClick={() => setIsInputVisible(!isInputVisible())}
-        style={{"background-image": "url('"+bgImage()+"')"}}
-      >
+        style={{"background-image": bgImage() ? "url('"+bgImage()+"')" : "url('https://source.unsplash.com/1600x900/?"+getRandomCategory()+"')"}}
+        >
+        {/* style={{"background-image": "url('"+bgImage()+"')"}} */}
         {props.children}
       </button>
     </>

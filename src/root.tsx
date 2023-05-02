@@ -23,7 +23,7 @@ export default function Root() {
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Body class="flex justify-center
-        w-screen bg-slate-50
+        w-screen min-h-screen bg-slate-50
         overflow-x-hidden">
         <Suspense>
           <ErrorBoundary>
