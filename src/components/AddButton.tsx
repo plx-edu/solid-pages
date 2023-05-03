@@ -16,31 +16,35 @@ export default function AddButton(props: any) {
   });
 
   function setBackgroundImage (e: any){
+    // console.log(e);
+    // console.log(e.currentTarget.value);
     // console.log(e.key);
-    if(e.key === "Enter"){
+    if(e.key === "Enter" || e.type === "focusout"){
       const url = e.currentTarget.value.trim();
       setBgImage(url.startsWith(artstationCDNA) || url.startsWith(artstationCDNB) ? url : "")
+      setIsInputVisible(false);
     }
   }
 
   return (
     <>
       {isInputVisible() ?
-        <button class="absolute z-10 p-2
+        <section class="absolute z-10 p-2
         w-full h-full
         flex justify-center items-center
         bg-black/[.45]"
         onClick={() => setIsInputVisible(false)}>
-          <div class="">
+          <div class="flex flex-col">
             <input type="text"
               class="w-full"
               ref={inputRef!}
               onkeypress={(e) => setBackgroundImage(e)}
               onClick={(e) => e.stopPropagation()}
-              onFocusOut={() => setIsInputVisible(false)}
+              // onFocusOut={() => setIsInputVisible(false)}
+              onFocusOut={(e) => setBackgroundImage(e)}
             />
           </div>
-        </button> : <></>
+        </section> : <></>
       }
 
       <button class={`flex justify-center items-center
