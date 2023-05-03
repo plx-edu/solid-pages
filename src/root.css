@@ -14,3 +14,9 @@
 .sqr-content{
   /* background-color: antiquewhite; */
 }
+
+@layer utilities{
+  .oneByTwo::before{
+    padding-top: 50%; 
+  }
+}
