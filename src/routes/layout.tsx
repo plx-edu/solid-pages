@@ -1,9 +1,10 @@
-import Square from "../components/Square";
+import Square from "../components/shapes/Square";
 import FourByOne from "../components/FourByOne";
 import ThreeByTwo from "../components/ThreeByTwo";
 import TwoByOne from "../components/TwoByOne";
 import TwoByThree from "../components/TwoByThree";
 import ThreeByOne from "../components/ThreeByOne";
+import Rectangle from "../components/shapes/Rectangle";
 
 export default function Layout() {
   const arrOfFive = [1,2,3,4,5];
@@ -33,9 +34,9 @@ export default function Layout() {
 
           <div id="row_1" class="flex flex-row w-full">
             <div class="w-4/5">
-              <FourByOne>
+              <Rectangle ratio={"1/4"}>
                 {PlusSVG()}
-              </FourByOne>
+              </Rectangle>
             </div>
 
             <div class="w-1/5">
@@ -53,9 +54,12 @@ export default function Layout() {
             </div>
 
             <div class="w-3/5">
-              <ThreeByTwo>
+              {/* 2/3 */}
+              <Rectangle ratio={"2/3"}>
                 {PlusSVG()}
-              </ThreeByTwo> 
+              </Rectangle>
+              {/* <ThreeByTwo>
+              </ThreeByTwo>  */}
             </div>
           </div>
 
@@ -85,36 +89,46 @@ export default function Layout() {
 
               {/* lower row */}
               <div class="">
-                <ThreeByTwo> 
+                <Rectangle ratio={"2/3"}>
                   {PlusSVG()}
-                </ThreeByTwo>
+                </Rectangle>
               </div>
             </div>
 
             {/* right col */}
             <div class="flex flex-col w-2/5">
-                <TwoByOne> 
-                  {PlusSVG()}
-                </TwoByOne>
+              <Rectangle ratio={"1/2"}>
+                {PlusSVG()}
+              </Rectangle>
 
-                <TwoByThree> 
-                  {PlusSVG()}
-                </TwoByThree>
+              <Rectangle ratio={"3/2"}>
+                {PlusSVG()}
+              </Rectangle>
             </div>
           </div>
 
           <div id="row_4" class="flex flex-row w-full">
             <div class="w-2/5">
-              <TwoByOne>
-                {PlusSVG()}
-              </TwoByOne> 
+            <Rectangle ratio={"1/2"}>
+              {PlusSVG()}
+            </Rectangle>
+              {/* <TwoByOne>
+              </TwoByOne>  */}
             </div>
 
             <div class="w-3/5">
-              <ThreeByOne>
+              <Rectangle ratio={"1/3"}>
                 {PlusSVG()}
-              </ThreeByOne>
+              </Rectangle>
+              {/* <ThreeByOne>
+              </ThreeByOne> */}
             </div>
+          </div>
+
+          <div id="row_5" class="flex flex-row w-full">
+            <Rectangle ratio={"1/5"}>
+              {PlusSVG()}
+            </Rectangle>
           </div>
       </section>
     </>

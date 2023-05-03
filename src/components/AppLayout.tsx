@@ -26,13 +26,13 @@ export default function AppLayout(props: any) {
       </section>
 
       <nav class="flex flex-row z-50
-        fixed bottom-0 left-0 right-0
-        bg-slate-50"
+        fixed bottom-2 self-center
+        rounded-md overflow-hidden
+        border border-gray-800"
       >
         <ul class="flex w-full h-10
-          border-t border-gray-800 text-slate-50
-          bg-gray-800
-        ">
+          text-slate-50 bg-slate-50"
+        >
           <li class={`w-full ${active("/")}`}>
             <A class="flex w-full h-full justify-center items-center" href="/">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
