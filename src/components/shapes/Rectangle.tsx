@@ -3,10 +3,10 @@ import Content from "../Content";
 import ShapeInner from "./ShapeInner";
 import ShapeOuter from "./ShapeOuter";
 
-export default function Rectangle(props: {children: any, ratio: string}) {
+export default function Rectangle(props: {children: any, ratio: string, innerClass?: string}) {
   return (
     <ShapeOuter ratio={props.ratio}>
-      <ShapeInner>
+      <ShapeInner class={props.innerClass}>
         <Content>
           <AddButton>
             {props.children}

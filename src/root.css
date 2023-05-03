@@ -8,15 +8,9 @@
 
 .sqr-inner{
   /* background-color: skyblue; */
-  padding: 2px;
+  /* padding: 2px; */
 }
 
 .sqr-content{
   /* background-color: antiquewhite; */
-}
-
-@layer utilities{
-  .oneByTwo::before{
-    padding-top: 50%; 
-  }
 }

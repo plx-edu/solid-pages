@@ -1,10 +1,7 @@
 import Square from "../components/shapes/Square";
-import FourByOne from "../components/FourByOne";
-import ThreeByTwo from "../components/ThreeByTwo";
-import TwoByOne from "../components/TwoByOne";
-import TwoByThree from "../components/TwoByThree";
-import ThreeByOne from "../components/ThreeByOne";
 import Rectangle from "../components/shapes/Rectangle";
+
+const boxPadding = "p-0.5";
 
 export default function Layout() {
   const arrOfFive = [1,2,3,4,5];
@@ -24,7 +21,7 @@ export default function Layout() {
             {
               arrOfFive.map((item, index) => {
                 return (
-                  <Square key={index}>
+                  <Square innerClass={boxPadding} key={index}>
                     {PlusSVG()}
                   </Square>
                 )
@@ -34,13 +31,13 @@ export default function Layout() {
 
           <div id="row_1" class="flex flex-row w-full">
             <div class="w-4/5">
-              <Rectangle ratio={"1/4"}>
+              <Rectangle innerClass={boxPadding} ratio={"1/4"}>
                 {PlusSVG()}
               </Rectangle>
             </div>
 
             <div class="w-1/5">
-              <Square>
+              <Square innerClass={boxPadding}>
                 {PlusSVG()}
               </Square> 
             </div>
@@ -48,14 +45,14 @@ export default function Layout() {
 
           <div id="row_2" class="flex flex-row w-full">
             <div class="w-2/5">
-              <Square>
+              <Square innerClass={boxPadding}>
                 {PlusSVG()}
               </Square> 
             </div>
 
             <div class="w-3/5">
               {/* 2/3 */}
-              <Rectangle ratio={"2/3"}>
+              <Rectangle innerClass={boxPadding} ratio={"2/3"}>
                 {PlusSVG()}
               </Rectangle>
               {/* <ThreeByTwo>
@@ -72,7 +69,7 @@ export default function Layout() {
                   {
                     arrOfTwo.map((item, index) => {
                       return (
-                        <Square key={index}>
+                        <Square innerClass={boxPadding} key={index}>
                           {PlusSVG()}
                         </Square>
                       )
@@ -81,7 +78,7 @@ export default function Layout() {
                 </div>
 
                 <div class="w-2/3">
-                  <Square>
+                  <Square innerClass={boxPadding}>
                     {PlusSVG()}
                   </Square>
                 </div>
@@ -89,7 +86,7 @@ export default function Layout() {
 
               {/* lower row */}
               <div class="">
-                <Rectangle ratio={"2/3"}>
+                <Rectangle innerClass={boxPadding} ratio={"2/3"}>
                   {PlusSVG()}
                 </Rectangle>
               </div>
@@ -97,11 +94,11 @@ export default function Layout() {
 
             {/* right col */}
             <div class="flex flex-col w-2/5">
-              <Rectangle ratio={"1/2"}>
+              <Rectangle innerClass={boxPadding} ratio={"1/2"}>
                 {PlusSVG()}
               </Rectangle>
 
-              <Rectangle ratio={"3/2"}>
+              <Rectangle innerClass={boxPadding} ratio={"3/2"}>
                 {PlusSVG()}
               </Rectangle>
             </div>
@@ -109,7 +106,7 @@ export default function Layout() {
 
           <div id="row_4" class="flex flex-row w-full">
             <div class="w-2/5">
-            <Rectangle ratio={"1/2"}>
+            <Rectangle innerClass={boxPadding} ratio={"1/2"}>
               {PlusSVG()}
             </Rectangle>
               {/* <TwoByOne>
@@ -117,7 +114,7 @@ export default function Layout() {
             </div>
 
             <div class="w-3/5">
-              <Rectangle ratio={"1/3"}>
+              <Rectangle innerClass={boxPadding} ratio={"1/3"}>
                 {PlusSVG()}
               </Rectangle>
               {/* <ThreeByOne>
@@ -126,7 +123,7 @@ export default function Layout() {
           </div>
 
           <div id="row_5" class="flex flex-row w-full">
-            <Rectangle ratio={"1/5"}>
+            <Rectangle innerClass={boxPadding} ratio={"1/5"}>
               {PlusSVG()}
             </Rectangle>
           </div>
@@ -147,7 +144,7 @@ export default function Layout() {
       </p>
 
       <div class="m-auto w-40">
-      <Square>
+      <Square innerClass={boxPadding}>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width={1.5} stroke="currentColor" class="w-6 h-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
         </svg>
