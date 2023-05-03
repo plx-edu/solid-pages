@@ -40,7 +40,6 @@ export default function AddButton(props: any) {
               ref={inputRef!}
               onkeypress={(e) => setBackgroundImage(e)}
               onClick={(e) => e.stopPropagation()}
-              // onFocusOut={() => setIsInputVisible(false)}
               onFocusOut={(e) => setBackgroundImage(e)}
             />
           </div>
