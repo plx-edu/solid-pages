@@ -16,14 +16,19 @@ export default function AddButton(props: any) {
   });
 
   function setBackgroundImage (e: any){
+    const url = e.currentTarget.value.trim();
     // console.log(e);
     // console.log(e.currentTarget.value);
     // console.log(e.key);
-    if(e.key === "Enter" || e.type === "focusout"){
-      const url = e.currentTarget.value.trim();
-      setBgImage(url.startsWith(artstationCDNA) || url.startsWith(artstationCDNB) ? url : "")
-      setIsInputVisible(false);
+    if(e.key === "Enter"){
+      setBgImage(url.startsWith(artstationCDNA) || url.startsWith(artstationCDNB) ? url : "");
+    }else if(e.type === "focusout"){
+      if(bgImage() === "" || (url.startsWith(artstationCDNA) || url.startsWith(artstationCDNB))){
+        setBgImage(url);
+      }
     }
+
+    setIsInputVisible(false);
   }
 
   return (
