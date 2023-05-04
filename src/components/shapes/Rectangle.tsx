@@ -2,10 +2,10 @@ import ShapeInner from "./ShapeInner";
 import ShapeOuter from "./ShapeOuter";
 
 export default function Rectangle(props: 
-  {children: any, ratio: string, innerClass?: string}){
+  {children: any, ratio: string, isRatioVisible?: boolean, innerClass?: string}){
 
   return (
-    <ShapeOuter ratio={props.ratio}>
+    <ShapeOuter ratio={props.ratio} isRatioVisible={props.isRatioVisible}>
       <ShapeInner class={props.innerClass}>
           {props.children}
       </ShapeInner>

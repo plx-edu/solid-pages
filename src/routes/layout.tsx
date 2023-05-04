@@ -16,7 +16,7 @@ export default function Layout() {
             {
               arrOfFive.map((item, index) => {
                 return (
-                  <Square innerClass={boxPadding} key={index}>
+                  <Square innerClass={boxPadding} key={index} isRatioVisible={true}>
                     <AddButton hasBorder={true}>
                     </AddButton>
                   </Square>
@@ -27,14 +27,14 @@ export default function Layout() {
 
           <div id="row_1" class="flex flex-row w-full">
             <div class="w-4/5">
-              <Rectangle innerClass={boxPadding} ratio={"1/4"}>
+              <Rectangle innerClass={boxPadding} ratio={"1/4"} isRatioVisible={true}>
                 <AddButton hasBorder={true}>
                 </AddButton>
               </Rectangle>
             </div>
 
             <div class="w-1/5">
-              <Square innerClass={boxPadding}>
+              <Square innerClass={boxPadding} isRatioVisible={true}>
                 <AddButton hasBorder={true}>
                 </AddButton>
               </Square> 
@@ -43,14 +43,14 @@ export default function Layout() {
 
           <div id="row_2" class="flex flex-row w-full">
             <div class="w-2/5">
-              <Square innerClass={boxPadding}>
+              <Square innerClass={boxPadding} isRatioVisible={true}>
                 <AddButton hasBorder={true}>
                 </AddButton>
               </Square> 
             </div>
 
             <div class="w-3/5">
-              <Rectangle innerClass={boxPadding} ratio={"2/3"}>
+              <Rectangle innerClass={boxPadding} ratio={"2/3"} isRatioVisible={true}>
                 <AddButton hasBorder={true}>
                 </AddButton>
               </Rectangle>
@@ -66,7 +66,7 @@ export default function Layout() {
                   {
                     arrOfTwo.map((item, index) => {
                       return (
-                        <Square innerClass={boxPadding} key={index}>
+                        <Square innerClass={boxPadding} key={index} isRatioVisible={true}>
                           <AddButton hasBorder={true}>
                           </AddButton>
                         </Square>
@@ -76,7 +76,7 @@ export default function Layout() {
                 </div>
 
                 <div class="w-2/3">
-                  <Square innerClass={boxPadding}>
+                  <Square innerClass={boxPadding} isRatioVisible={true}>
                     <AddButton hasBorder={true}>
                 </AddButton>
                   </Square>
@@ -85,7 +85,7 @@ export default function Layout() {
 
               {/* lower row */}
               <div class="">
-                <Rectangle innerClass={boxPadding} ratio={"2/3"}>
+                <Rectangle innerClass={boxPadding} ratio={"2/3"} isRatioVisible={true}>
                   <AddButton hasBorder={true}>
                   </AddButton>
                 </Rectangle>
@@ -94,12 +94,12 @@ export default function Layout() {
 
             {/* right col */}
             <div class="flex flex-col w-2/5">
-              <Rectangle innerClass={boxPadding} ratio={"1/2"}>
+              <Rectangle innerClass={boxPadding} ratio={"1/2"} isRatioVisible={true}>
                 <AddButton hasBorder={true}>
                 </AddButton>
               </Rectangle>
 
-              <Rectangle innerClass={boxPadding} ratio={"3/2"}>
+              <Rectangle innerClass={boxPadding} ratio={"3/2"} isRatioVisible={true}>
                 <AddButton hasBorder={true}>
                 </AddButton>
               </Rectangle>
@@ -108,14 +108,14 @@ export default function Layout() {
 
           <div id="row_4" class="flex flex-row w-full">
             <div class="w-2/5">
-            <Rectangle innerClass={boxPadding} ratio={"1/2"}>
+            <Rectangle innerClass={boxPadding} ratio={"1/2"} isRatioVisible={true}>
               <AddButton hasBorder={true}>
               </AddButton>
             </Rectangle>
             </div>
 
             <div class="w-3/5">
-              <Rectangle innerClass={boxPadding} ratio={"1/3"}>
+              <Rectangle innerClass={boxPadding} ratio={"1/3"} isRatioVisible={true}>
                 <AddButton hasBorder={true}>
                 </AddButton>
               </Rectangle>
@@ -123,7 +123,7 @@ export default function Layout() {
           </div>
 
           <div id="row_5" class="flex flex-row w-full">
-            <Rectangle innerClass={boxPadding} ratio={"1/5"}>
+            <Rectangle innerClass={boxPadding} ratio={"1/5"} isRatioVisible={true}>
               <AddButton hasBorder={true}>
               </AddButton>
             </Rectangle>
