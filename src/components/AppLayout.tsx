@@ -7,7 +7,7 @@ export default function AppLayout(props: any) {
   const location = useLocation();
   const active = (path: string) => {
     return "/solid-pages"+path === location.pathname || "/solid-pages/"+path === location.pathname
-      ? "text-gray-600 bg-gray-800"
+      ? "text-gray-600 hover:text-gray-700 bg-gray-800"
       : "text-gray-500 hover:text-gray-800 hover:border-l-gray-800"
     // return "/solid-pages"+path === location.pathname || "/solid-pages/"+path === location.pathname
     //   ? "border-4 border-transparent bg-gray-800"
@@ -32,7 +32,6 @@ export default function AppLayout(props: any) {
 
       <nav class="flex flex-row z-50
         self-center fixed bottom-2">
-        {/* <ul class="flex min-w-[160px] */}
         <ul class={`flex flex-cozl ${ isMenuVisible() ? "w-36 border border-gray-200 rounded-sm" : "w-9 rounded-3xl"}
           text-slate-50
           overflow-hidden bg-slate-50 shadow-lg`}>
@@ -68,24 +67,17 @@ export default function AppLayout(props: any) {
           </>}
           <li class={`w-full h-full`}>
             <Square>
-              <button class="flex w-full h-full justify-center items-center text-gray-500 hover:text-gray-800" onClick={() => setIsMenuVisible(!isMenuVisible())}>
-
+              <button class="flex w-full h-full justify-center items-center text-gray-500 hover:text-gray-800"
+                onClick={() => setIsMenuVisible(!isMenuVisible())}>
                 {isMenuVisible() ? 
-                  // <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 stroke-1 hover:stroke-2">
-                  //   <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                  // </svg>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                     <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
                   </svg>
                 :
-                  // <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 stroke-1 hover:stroke-2">
-                  //   <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                  // </svg>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                     <path d="M3 10a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM8.5 10a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM15.5 8.5a1.5 1.5 0 100 3 1.5 1.5 0 000-3z" />
                   </svg>
               }
-                
               </button>
             </Square>
           </li>
