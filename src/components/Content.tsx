@@ -1,10 +1,11 @@
-export default function Content(props: any) {
+export default function Content(props: {children: any, hasBorder?: boolean}) {
   return (
-    <div class="sqr-content
+    <div class={`sqr-content
       flex justify-center items-center
       h-full w-full relative
       overflow-hidden
-      border rounded-sm border-gray-800"
+      rounded-sm`}
+      classList={{"border border-gray-800": props.hasBorder}}
     >
       {props.children}
     </div>

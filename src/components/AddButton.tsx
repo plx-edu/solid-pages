@@ -1,10 +1,10 @@
 import { createEffect, createSignal } from "solid-js";
-import { useHref } from "solid-start";
+import Content from "./Content";
 
 const artstationCDNA = "https://cdna.artstation.com/p/assets/images/images";
 const artstationCDNB = "https://cdnb.artstation.com/p/assets/images/images";
 
-export default function AddButton(props: any) {
+export default function AddButton(props:  {children: any, hasBorder?: boolean}) {
   const [bgImage, setBgImage] = createSignal("");
   const [isInputVisible, setIsInputVisible] = createSignal(false);
   let inputRef: HTMLInputElement;
@@ -27,12 +27,17 @@ export default function AddButton(props: any) {
         setBgImage(url);
       }
     }
-
     setIsInputVisible(false);
   }
 
+  const PlusSVG = () => {return (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width={1.5} stroke="currentColor" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+    </svg>
+  )};
+
   return (
-    <>
+    <Content hasBorder={props.hasBorder}>
       {isInputVisible() ?
         <section class="absolute z-10 p-2
         w-full h-full
@@ -60,8 +65,9 @@ export default function AddButton(props: any) {
         style={{"background-image": "url('"+bgImage()+"')"}}
         >
         {/* style={{"background-image": "url('"+bgImage()+"')"}} */}
+        {bgImage() ? <></> : PlusSVG()}
         {props.children}
       </button>
-    </>
+    </Content>
   );
 }
