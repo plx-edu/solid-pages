@@ -42,7 +42,7 @@ export default function AddButton(props:  {children: any, hasBorder?: boolean}) 
         <section class="absolute z-10 p-2
         w-full h-full
         flex justify-center items-center
-        bg-black/[.45]"
+        bg-black/[.25]"
         onClick={() => setIsInputVisible(false)}>
           <div class="flex flex-col">
             <input type="text"
@@ -58,8 +58,8 @@ export default function AddButton(props:  {children: any, hasBorder?: boolean}) 
 
       <button class={`flex justify-center items-center
         w-full h-full relative
-        text-gray-800  hover:text-white hover:font-extrabold
-        hover:bg-gray-800
+        text-gray-200 hover:text-gray-300 hover:font-extrabold
+        hovezr:bg-gray-400
         bg-center bg-cover bg-no-repeat`}
         onClick={() => setIsInputVisible(!isInputVisible())}
         style={{"background-image": "url('"+bgImage()+"')"}}

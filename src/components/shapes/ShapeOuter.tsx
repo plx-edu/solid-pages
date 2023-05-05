@@ -2,7 +2,7 @@ export default function ShapeOuter(props: {children: any, ratio: string, isRatio
   return (
     <div class={`sqr-outer relative w-full before:content-[''] before:block before:pt-[${props.ratio}]`}>
       {props.isRatioVisible &&
-        <div class="absolute top-1 left-2 text-xs">
+        <div class="absolute top-1 left-2 text-xs text-gray-300">
           <p>{props.ratio}</p>
         </div>
       }

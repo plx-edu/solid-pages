@@ -32,9 +32,9 @@ export default function AppLayout(props: any) {
 
       <nav class="flex flex-row z-50
         self-center fixed bottom-2">
-        <ul class={`flex flex-cozl ${ isMenuVisible() ? "w-36 border border-gray-200 rounded-sm" : "w-9 rounded-3xl"}
-          text-slate-50
-          overflow-hidden bg-slate-50 shadow-lg`}>
+        <ul class={`flex flex-cozl ${ isMenuVisible() ? "w-36 border-gray-200 rounded-sm" : "w-9 border-gray-100 rounded-3xl"}
+          text-slate-50 border 
+          overflow-hidden bg-slate-50 shadow-md`}>
           { isMenuVisible() &&
           <>
             <li class={`w-full h-full`}>
