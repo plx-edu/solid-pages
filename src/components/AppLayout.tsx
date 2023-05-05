@@ -5,7 +5,7 @@ import { createSignal } from "solid-js";
 export default function AppLayout(props: any) {
   const [touchStart, setTouchStart] = createSignal(0);
   const [touchEnd, setTouchEnd] = createSignal(0);
-  // const [swipeDistance, setSwipeDistance] = createSignal(0);
+  const [swipeDistance, setSwipeDistance] = createSignal(0);
 
   const [isMenuVisible, setIsMenuVisible] = createSignal(true);
   const [isSearchVisible, setIsSearchVisible] = createSignal(false);
@@ -27,12 +27,11 @@ export default function AppLayout(props: any) {
       }}
       onTouchEnd={(e) => {
         setTouchEnd(e.changedTouches[0].clientX)
-        // setSwipeDistance(touchStart() - touchEnd());
-        // console.log("swipe distance", swipeDistance());
-        if (touchStart() - touchEnd() > 150) {
-          console.log("swipe left", touchStart(), touchEnd())
-        } else if (touchStart() - touchEnd() < -150) {
-          console.log("swipe right", touchStart(), touchEnd())
+        setSwipeDistance(touchStart() - touchEnd());
+        if (swipeDistance() > 150) {
+          console.log("swipe left", swipeDistance())
+        } else if (swipeDistance() < -150) {
+          console.log("swipe right", swipeDistance())
         }
       }}
     >
@@ -53,9 +52,9 @@ export default function AppLayout(props: any) {
         </div>
       </section>}
 
-      <div id="swipe-debug" class="fixed top-0.5 right-0.5 p-0.5 text-xs bg-gray-200">
-        <p>{`swipe distance: ${touchStart() - touchEnd()}`}</p>
-        {/* <p>{`swipe distance: ${swipeDistance()}`}</p> */}
+      <div id="swipe-debug" class="fixed top-0.5 right-0.5 p-0.5 text-xs text-right backdrop-blur-lg">
+        <p class="bg-slate-50 bg-opacity-25">{(swipeDistance() > 150 || swipeDistance() < -150) && `swiped ${swipeDistance() > 0 ? 'left':'right'}`}</p>
+        <p class="bg-slate-50 bg-opacity-25">{(swipeDistance() > 150 || swipeDistance() < -150) && `distance ${swipeDistance()}`}</p>
       </div>
 
 
