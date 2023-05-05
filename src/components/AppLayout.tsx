@@ -1,10 +1,12 @@
 import { A, useLocation } from "solid-start";
 import Square from "./shapes/Square";
 import { createSignal } from "solid-js";
-import Rectangle from "./shapes/Rectangle";
-import Content from "./Content";
 
 export default function AppLayout(props: any) {
+  const [touchStart, setTouchStart] = createSignal(0);
+  const [touchEnd, setTouchEnd] = createSignal(0);
+  // const [swipeDistance, setSwipeDistance] = createSignal(0);
+
   const [isMenuVisible, setIsMenuVisible] = createSignal(true);
   const [isSearchVisible, setIsSearchVisible] = createSignal(false);
   const location = useLocation();
@@ -20,6 +22,19 @@ export default function AppLayout(props: any) {
       flex flex-col
       text-gray-800 
       justify-between pt-0.5"
+      onTouchStart={(e) => {
+        setTouchStart(e.targetTouches[0].clientX)
+      }}
+      onTouchEnd={(e) => {
+        setTouchEnd(e.changedTouches[0].clientX)
+        // setSwipeDistance(touchStart() - touchEnd());
+        // console.log("swipe distance", swipeDistance());
+        if (touchStart() - touchEnd() > 150) {
+          console.log("swipe left", touchStart(), touchEnd())
+        } else if (touchStart() - touchEnd() < -150) {
+          console.log("swipe right", touchStart(), touchEnd())
+        }
+      }}
     >
       <div class="w-full z-40
         fixed top-0 left-0 right-0 
@@ -38,6 +53,10 @@ export default function AppLayout(props: any) {
         </div>
       </section>}
 
+      <div id="swipe-debug" class="fixed top-0.5 right-0.5 p-0.5 text-xs bg-gray-200">
+        <p>{`swipe distance: ${touchStart() - touchEnd()}`}</p>
+        {/* <p>{`swipe distance: ${swipeDistance()}`}</p> */}
+      </div>
 
 
       <nav class="flex flex-col z-50
