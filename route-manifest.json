@@ -2,67 +2,67 @@
   "/*404": [
     {
       "type": "script",
-      "href": "/solid-pages/assets/_...404_-75ab3f4c.js"
+      "href": "/solid-pages/assets/_...404_-eda63c6f.js"
     },
     {
       "type": "script",
-      "href": "/solid-pages/assets/entry-client-757f6da9.js"
+      "href": "/solid-pages/assets/entry-client-bd649daf.js"
     },
     {
       "type": "style",
-      "href": "/solid-pages/assets/entry-client-89d753ac.css"
+      "href": "/solid-pages/assets/entry-client-c5c632db.css"
     }
   ],
   "/about": [
     {
       "type": "script",
-      "href": "/solid-pages/assets/about-c0d7b32c.js"
+      "href": "/solid-pages/assets/about-ff81474f.js"
     },
     {
       "type": "script",
-      "href": "/solid-pages/assets/entry-client-757f6da9.js"
+      "href": "/solid-pages/assets/entry-client-bd649daf.js"
     },
     {
       "type": "style",
-      "href": "/solid-pages/assets/entry-client-89d753ac.css"
+      "href": "/solid-pages/assets/entry-client-c5c632db.css"
     }
   ],
   "/": [
     {
       "type": "script",
-      "href": "/solid-pages/assets/index-61654915.js"
+      "href": "/solid-pages/assets/index-a10e3d9e.js"
     },
     {
       "type": "script",
-      "href": "/solid-pages/assets/entry-client-757f6da9.js"
+      "href": "/solid-pages/assets/entry-client-bd649daf.js"
     },
     {
       "type": "style",
-      "href": "/solid-pages/assets/entry-client-89d753ac.css"
+      "href": "/solid-pages/assets/entry-client-c5c632db.css"
     }
   ],
   "/layout": [
     {
       "type": "script",
-      "href": "/solid-pages/assets/layout-5c9c6ccd.js"
+      "href": "/solid-pages/assets/layout-31b0514b.js"
     },
     {
       "type": "script",
-      "href": "/solid-pages/assets/entry-client-757f6da9.js"
+      "href": "/solid-pages/assets/entry-client-bd649daf.js"
     },
     {
       "type": "style",
-      "href": "/solid-pages/assets/entry-client-89d753ac.css"
+      "href": "/solid-pages/assets/entry-client-c5c632db.css"
     }
   ],
   "entry-client": [
     {
       "type": "script",
-      "href": "/solid-pages/assets/entry-client-757f6da9.js"
+      "href": "/solid-pages/assets/entry-client-bd649daf.js"
     },
     {
       "type": "style",
-      "href": "/solid-pages/assets/entry-client-89d753ac.css"
+      "href": "/solid-pages/assets/entry-client-c5c632db.css"
     }
   ],
   "index.html": []
