@@ -26,13 +26,14 @@ export default function AppLayout(props: any) {
         border-t-2 border-gray-800">
       </div>
 
-      <section id="content" class="pb-12">
+      <section id="content" class="pb-14">
         {props.children}
       </section>
 
       <nav class="flex flex-row z-50
         self-center fixed bottom-2">
-        <ul class={`flex flex-cozl ${ isMenuVisible() ? "w-36 border-gray-200 rounded-sm" : "w-9 border-gray-100 rounded-3xl"}
+          {/* <ul class={`flex flex-cozl ${ isMenuVisible() ? "w-36 border-gray-200 rounded-sm" : "w-9 border-gray-100  */}
+        <ul class={`flex flex-cozl ${ isMenuVisible() ? "w-44 border-gray-200 rounded-sm" : "w-11 border-gray-100 rounded-3xl"}
           text-slate-50 border 
           overflow-hidden bg-slate-50 shadow-md`}>
           { isMenuVisible() &&
