@@ -1,17 +1,17 @@
 import { A, useLocation } from "solid-start";
 import Square from "./shapes/Square";
 import { createSignal } from "solid-js";
+import Rectangle from "./shapes/Rectangle";
+import Content from "./Content";
 
 export default function AppLayout(props: any) {
   const [isMenuVisible, setIsMenuVisible] = createSignal(true);
+  const [isSearchVisible, setIsSearchVisible] = createSignal(false);
   const location = useLocation();
   const active = (path: string) => {
     return "/solid-pages"+path === location.pathname || "/solid-pages/"+path === location.pathname
       ? "text-gray-600 hover:text-gray-700 bg-gray-800"
       : "text-gray-500 hover:text-gray-800 hover:border-l-gray-800"
-    // return "/solid-pages"+path === location.pathname || "/solid-pages/"+path === location.pathname
-    //   ? "border-4 border-transparent bg-gray-800"
-    //   : "border-4 border-transparent text-gray-800 hover:border-l-gray-800"
   };
 
   return (
@@ -26,19 +26,28 @@ export default function AppLayout(props: any) {
         border-t-2 border-gray-800">
       </div>
 
-      <section id="content" class="pb-14">
+      <section id="content" class="pb-12">
         {props.children}
       </section>
+      
+      {isSearchVisible() && <section id="search"
+        class="fixed w-screen h-screen backdrop-blur-lg"
+      >
+        <div class="w-full h-full bg-slate-50 bg-opacity-80">
+          Search placeholder
+        </div>
+      </section>}
 
-      <nav class="flex flex-row z-50
-        self-center fixed bottom-2">
-          {/* <ul class={`flex flex-cozl ${ isMenuVisible() ? "w-36 border-gray-200 rounded-sm" : "w-9 border-gray-100  */}
-        <ul class={`flex flex-cozl ${ isMenuVisible() ? "w-44 border-gray-200 rounded-sm" : "w-11 border-gray-100 rounded-3xl"}
-          text-slate-50 border 
-          overflow-hidden bg-slate-50 shadow-md`}>
+
+
+      <nav class="flex flex-col z-50
+        self-center fixed bottom-1.5">
+        <ul class={`flex ${ isMenuVisible() ? "w-48 rounded-sm" : "w-10 rounded-3xl"}
+          text-slate-50 border border-gray-200 border-opacity-40
+          overflow-hidden backdrop-blur-md shadow-md`}>
           { isMenuVisible() &&
           <>
-            <li class={`w-full h-full`}>
+            <li class={`w-full h-full bg-slate-50 bg-opacity-60`}>
               <Square>
                 <A class={`flex w-full h-full justify-center items-center  ${active("/")}`} href="/">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
@@ -47,7 +56,7 @@ export default function AppLayout(props: any) {
                 </A>
               </Square>
             </li>
-            <li class={`w-full h-full`}>
+            <li class={`w-full h-full bg-slate-50 bg-opacity-60`}>
               <Square>
                 <A class={`flex w-full h-full justify-center items-center  ${active("/layout")}`} href="../layout" >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
@@ -56,7 +65,7 @@ export default function AppLayout(props: any) {
                 </A>
               </Square>
             </li>
-            <li class={`w-full h-full hover:shadow-2xl`}>
+            <li class={`w-full h-full bg-slate-50 bg-opacity-60`}>
               <Square>
                 <A class={`flex w-full h-full justify-center items-center ${active("/about")}`} href="../about">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
@@ -65,11 +74,24 @@ export default function AppLayout(props: any) {
                 </A>
               </Square>
             </li>
+            <li class={`w-full h-full bg-slate-50 bg-opacity-60`}>
+              <Square>
+                <button class="flex w-full h-full justify-center items-center text-gray-500 hover:text-gray-800"
+                  onClick={() => setIsSearchVisible(!isSearchVisible())}>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                    <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd" />
+                  </svg>
+                </button>
+              </Square>
+            </li>
           </>}
-          <li class={`w-full h-full`}>
+          <li class={`w-full h-full bg-slate-50 bg-opacity-60`}>
             <Square>
               <button class="flex w-full h-full justify-center items-center text-gray-500 hover:text-gray-800"
-                onClick={() => setIsMenuVisible(!isMenuVisible())}>
+                onClick={() => {
+                  setIsMenuVisible(!isMenuVisible());
+                  setIsSearchVisible(false);
+                  }}>
                 {isMenuVisible() ? 
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                     <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
@@ -88,42 +110,14 @@ export default function AppLayout(props: any) {
   );
 }
 
-
-{/* <nav class="flex flex-row z-50
-w-32
-fixed bottom-2 self-center
-rounded-md overflow-hidden
-border border-gray-800"
->
-<ul class="flex w-full h-10
-  text-slate-50 bg-slate-50"
->
-  <li class={`w-full ${active("/")}`}>
-    <Square>
-      <A class="flex w-full h-full justify-center items-center" href="/">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-        </svg>
-      </A>
-    </Square>
-  </li>
-  <li class={`w-full h-full ${active("/layout")}`}>
-    <Square>
-      <A class="flex w-full h-full justify-center items-center" href="../layout" >
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 7.125C2.25 6.504 2.754 6 3.375 6h6c.621 0 1.125.504 1.125 1.125v3.75c0 .621-.504 1.125-1.125 1.125h-6a1.125 1.125 0 01-1.125-1.125v-3.75zM14.25 8.625c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v8.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-8.25zM3.75 16.125c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-2.25z" />
-        </svg>
-      </A>
-    </Square>
-  </li>
-  <li class={`w-full h-full ${active("/about")}`}>
-    <Square>
-      <A class="flex w-full h-full justify-center items-center" href="../about">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
-        </svg>
-      </A>
-    </Square>
-  </li>
-</ul>
-</nav> */}
+{/* 
+  <div class="w-72 fixed bottom-12 self-center">
+    <Rectangle innerClass="p-0.5"  ratio={"1/3"} isRatioVisible={true}>
+      <Content hasBorder={true}>
+        <section id="search" class="flex justify-center items-center w-full h-full bg-gray-800">
+          <input type="text" />
+        </section>
+      </Content>
+    </Rectangle>
+  </div>
+*/}
