@@ -1,18 +1,23 @@
 import { A, useLocation } from "solid-start";
 import Square from "./shapes/Square";
-import { createSignal } from "solid-js";
+import { createContext, createSignal } from "solid-js";
+
+export const SwipeContext = createContext<any>();
+
+const SWIPE_DISTANCE = 200;
 
 export default function AppLayout(props: any) {
   const [touchStart, setTouchStart] = createSignal(0);
   const [touchEnd, setTouchEnd] = createSignal(0);
   const [swipeDistance, setSwipeDistance] = createSignal(0);
+  const [isSwipeLeft, setIsSwipeLeft] = createSignal(false);
 
   const [isMenuVisible, setIsMenuVisible] = createSignal(true);
   const [isSearchVisible, setIsSearchVisible] = createSignal(false);
   const location = useLocation();
   const active = (path: string) => {
     return "/solid-pages"+path === location.pathname || "/solid-pages/"+path === location.pathname
-      ? "text-gray-600 hover:text-gray-700 bg-gray-800"
+      ? "text-gray-600 hover:text-gray-700 bg-gray-800- bg-gradient-to-b from-gray-700 to-gray-800"
       : "text-gray-500 hover:text-gray-800 hover:border-l-gray-800"
   };
 
@@ -28,10 +33,12 @@ export default function AppLayout(props: any) {
       onTouchEnd={(e) => {
         setTouchEnd(e.changedTouches[0].clientX)
         setSwipeDistance(touchStart() - touchEnd());
-        if (swipeDistance() > 150) {
-          console.log("swipe left", swipeDistance())
-        } else if (swipeDistance() < -150) {
-          console.log("swipe right", swipeDistance())
+        if (swipeDistance() > SWIPE_DISTANCE) {
+          // console.log("swipe left", swipeDistance());
+          setIsSwipeLeft(true);
+        } else if (swipeDistance() < -SWIPE_DISTANCE) {
+          // console.log("swipe right", swipeDistance());
+          setIsSwipeLeft(false);
         }
       }}
     >
@@ -40,10 +47,12 @@ export default function AppLayout(props: any) {
         border-t-2 border-gray-800">
       </div>
 
+      <SwipeContext.Provider value={{isSwipeLeft}}>
       <section id="content" class="pb-12">
         {props.children}
       </section>
-      
+      </SwipeContext.Provider>
+
       {isSearchVisible() && <section id="search"
         class="fixed w-screen h-screen backdrop-blur-lg"
       >
@@ -53,8 +62,8 @@ export default function AppLayout(props: any) {
       </section>}
 
       <div id="swipe-debug" class="fixed top-0.5 right-0.5 p-0.5 text-xs text-right backdrop-blur-lg">
-        <p class="bg-slate-50 bg-opacity-25">{(swipeDistance() > 150 || swipeDistance() < -150) && `swiped ${swipeDistance() > 0 ? 'left':'right'}`}</p>
-        <p class="bg-slate-50 bg-opacity-25">{(swipeDistance() > 150 || swipeDistance() < -150) && `distance ${swipeDistance()}`}</p>
+        <p class="bg-slate-50 bg-opacity-25">{(swipeDistance() > SWIPE_DISTANCE || swipeDistance() < -SWIPE_DISTANCE) && `swiped ${swipeDistance() > 0 ? 'left':'right'}`}</p>
+        <p class="bg-slate-50 bg-opacity-25">{(swipeDistance() > SWIPE_DISTANCE || swipeDistance() < -SWIPE_DISTANCE) && `distance ${swipeDistance()}`}</p>
       </div>
 
 

@@ -1,23 +1,51 @@
 import Square from "../components/shapes/Square";
 import Rectangle from "../components/shapes/Rectangle";
 import AddButton from "../components/AddButton";
+import { createEffect, createSignal, useContext } from "solid-js";
+import { SwipeContext } from "~/components/AppLayout";
 
 const boxPadding = "p-0.5";
 
 export default function Layout() {
+  const [orderList, setOrderList] = createSignal<number[]>([]);
+  const {isSwipeLeft} = useContext(SwipeContext);
+
   const arrOfFive = [1,2,3,4,5];
   const arrOfTwo = [1,2];
 
+  createEffect(() => {
+    isSwipeLeft() ? setRandomOrder() : setOrderList([]);
+  });
+
+  function setRandomOrder(){
+    const newOrderList: number[] = [];
+    const nbRows = 6;
+
+    function getRandomInt(max: number) {
+      // from 1 to max
+      return Math.floor((Math.random() * max) + 1);
+    }
+
+    while(newOrderList.length < nbRows){
+      const randomInt = getRandomInt(nbRows);
+      if(!newOrderList.includes(randomInt)){
+        newOrderList.push(randomInt);
+      }
+    }
+    setOrderList(newOrderList);
+  }
+
   return (
     <>
-      <section id="layout_section" class="w-full">
+      <section id="layout_section" class="flex flex-col w-full">
+        {/* <button onClick={() => setRandomOrder()}>Randomize</button> */}
 
-          <div id="row_0" class="flex flex-row w-full">
+          <div id="row_0" class="flex flex-row w-full" style={orderList().length === 6 ? { order: orderList()[0]} : ""}>
             {
-              arrOfFive.map((item, index) => {
+              arrOfFive.map((_item, index) => {
                 return (
                   <Square innerClass={boxPadding} key={index} isRatioVisible={true}>
-                    <AddButton hasBorder={true}>
+                    <AddButton hasBorder={true} >
                     </AddButton>
                   </Square>
                 )
@@ -25,7 +53,7 @@ export default function Layout() {
             }
           </div>
 
-          <div id="row_1" class="flex flex-row w-full">
+          <div id="row_1" class="flex flex-row w-full" style={orderList().length === 6 ? { order: orderList()[1]} : ""}>
             <div class="w-4/5">
               <Rectangle innerClass={boxPadding} ratio={"1/4"} isRatioVisible={true}>
                 <AddButton hasBorder={true}>
@@ -41,7 +69,7 @@ export default function Layout() {
             </div>
           </div>
 
-          <div id="row_2" class="flex flex-row w-full">
+          <div id="row_2" class="flex flex-row w-full" style={orderList().length === 6 ? { order: orderList()[2]} : ""}>
             <div class="w-2/5">
               <Square innerClass={boxPadding} isRatioVisible={true}>
                 <AddButton hasBorder={true}>
@@ -57,7 +85,7 @@ export default function Layout() {
             </div>
           </div>
 
-          <div id="row_3" class="flex flex-row w-full">
+          <div id="row_3" class="flex flex-row w-full" style={orderList().length === 6 ? { order: orderList()[3]} : ""}>
             {/* left col */}
             <div class="flex flex-col w-3/5">
               {/* upper row */}
@@ -106,7 +134,7 @@ export default function Layout() {
             </div>
           </div>
 
-          <div id="row_4" class="flex flex-row w-full">
+          <div id="row_4" class="flex flex-row w-full" style={orderList().length === 6 ? { order: orderList()[4]} : ""}>
             <div class="w-2/5">
             <Rectangle innerClass={boxPadding} ratio={"1/2"} isRatioVisible={true}>
               <AddButton hasBorder={true}>
@@ -122,7 +150,7 @@ export default function Layout() {
             </div>
           </div>
 
-          <div id="row_5" class="flex flex-row w-full">
+          <div id="row_5" class="flex flex-row w-full" style={orderList().length === 6 ? { order: orderList()[5]} : ""}>
             <Rectangle innerClass={boxPadding} ratio={"1/5"} isRatioVisible={true}>
               <AddButton hasBorder={true}>
               </AddButton>

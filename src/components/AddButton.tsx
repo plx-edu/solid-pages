@@ -59,10 +59,9 @@ export default function AddButton(props:  {children: any, hasBorder?: boolean}) 
       <button class={`flex justify-center items-center
         w-full h-full relative
         text-gray-200 hover:text-gray-300 hover:font-extrabold
-        hovezr:bg-gray-400
         bg-center bg-cover bg-no-repeat`}
         onClick={() => setIsInputVisible(!isInputVisible())}
-        style={{"background-image": "url('"+bgImage()+"')"}}
+        style={bgImage() && {"background-image": "url('"+bgImage()+"')"}}
         >
         {/* style={{"background-image": "url('"+bgImage()+"')"}} */}
         {bgImage() ? <></> : PlusSVG()}
@@ -71,3 +70,8 @@ export default function AddButton(props:  {children: any, hasBorder?: boolean}) 
     </Content>
   );
 }
+
+/**
+gradient reminder
+hover:bg-gradient-to-b from-slate-50 to-slate-100
+ */
