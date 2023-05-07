@@ -1,21 +1,32 @@
 import Square from "../components/shapes/Square";
 import Rectangle from "../components/shapes/Rectangle";
 import AddButton from "../components/AddButton";
-import { createEffect, createSignal, useContext } from "solid-js";
+import { createEffect, createSignal, on, useContext } from "solid-js";
 import { SwipeContext } from "~/components/AppLayout";
 
 const boxPadding = "p-0.5";
 
 export default function Layout() {
   const [orderList, setOrderList] = createSignal<number[]>([]);
-  const {isSwipeLeft} = useContext(SwipeContext);
+  const {swipeDistance} = useContext(SwipeContext);
 
   const arrOfFive = [1,2,3,4,5];
   const arrOfTwo = [1,2];
 
-  createEffect(() => {
-    isSwipeLeft() ? setRandomOrder() : setOrderList([]);
-  });
+  createEffect(
+    on(
+      swipeDistance,
+      () => {
+        // console.log("swipeDistance", swipeDistance());
+        swipeDistance() > 0 ? setOrderList([]) : setRandomOrder();
+      },
+      {defer: true}
+    )
+  );
+  // createEffect(() => {
+  //   console.log("swipeDistance", swipeDistance());
+  //   swipeDistance() >= 0 ? setOrderList([]) : setRandomOrder();
+  // });
 
   function setRandomOrder(){
     const newOrderList: number[] = [];

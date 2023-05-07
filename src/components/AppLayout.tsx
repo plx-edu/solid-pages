@@ -4,13 +4,12 @@ import { createContext, createSignal } from "solid-js";
 
 export const SwipeContext = createContext<any>();
 
-const SWIPE_DISTANCE = 200;
+const SWIPE_DISTANCE = 150;
 
 export default function AppLayout(props: any) {
   const [touchStart, setTouchStart] = createSignal(0);
   const [touchEnd, setTouchEnd] = createSignal(0);
   const [swipeDistance, setSwipeDistance] = createSignal(0);
-  const [isSwipeLeft, setIsSwipeLeft] = createSignal(false);
 
   const [isMenuVisible, setIsMenuVisible] = createSignal(true);
   const [isSearchVisible, setIsSearchVisible] = createSignal(false);
@@ -25,20 +24,17 @@ export default function AppLayout(props: any) {
     <section class="
       w-screen
       flex flex-col
-      text-gray-800 
+      text-gray-800
       justify-between pt-0.5"
       onTouchStart={(e) => {
-        setTouchStart(e.targetTouches[0].clientX)
+        setTouchStart(e.targetTouches[0].clientX);
       }}
       onTouchEnd={(e) => {
-        setTouchEnd(e.changedTouches[0].clientX)
-        setSwipeDistance(touchStart() - touchEnd());
-        if (swipeDistance() > SWIPE_DISTANCE) {
-          // console.log("swipe left", swipeDistance());
-          setIsSwipeLeft(true);
-        } else if (swipeDistance() < -SWIPE_DISTANCE) {
-          // console.log("swipe right", swipeDistance());
-          setIsSwipeLeft(false);
+        setTouchEnd(e.changedTouches[0].clientX);
+        
+        const newSwipeDistance = touchStart() - touchEnd();
+        if (newSwipeDistance > SWIPE_DISTANCE || newSwipeDistance < -SWIPE_DISTANCE) {
+          setSwipeDistance(newSwipeDistance);
         }
       }}
     >
@@ -47,7 +43,7 @@ export default function AppLayout(props: any) {
         border-t-2 border-gray-800">
       </div>
 
-      <SwipeContext.Provider value={{isSwipeLeft}}>
+      <SwipeContext.Provider value={{swipeDistance}}>
       <section id="content" class="pb-12">
         {props.children}
       </section>
