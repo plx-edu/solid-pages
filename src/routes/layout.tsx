@@ -18,7 +18,7 @@ export default function Layout() {
       swipeDistance,
       () => {
         // console.log("swipeDistance", swipeDistance());
-        swipeDistance() > 0 ? setOrderList([]) : setRandomOrder();
+        swipeDistance() > 0 ? setRandomOrder() :setOrderList([]);
       },
       {defer: true}
     )
