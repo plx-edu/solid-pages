@@ -6,6 +6,7 @@ export default function About() {
       <h1 class="max-6-xs text-6xl font-thin uppercase my-16">
         About Page
       </h1>
+      <p class="text-xs font-thin">Images you can see are placeholders...</p>
 
       <p class="my-4">
         <A href="/" class="text-sky-600 hover:underline">
