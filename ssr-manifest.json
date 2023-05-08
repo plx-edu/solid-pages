@@ -36,15 +36,15 @@
   "node_modules/solid-start/server/types.tsx": [
   ],
   "src/components/AddButton.tsx": [
-    "/solid-pages/assets/layout-26e6300a.js"
+    "/solid-pages/assets/layout-1508a82b.js"
   ],
   "src/components/AppLayout.tsx": [
   ],
   "src/components/Content.tsx": [
-    "/solid-pages/assets/layout-26e6300a.js"
+    "/solid-pages/assets/layout-1508a82b.js"
   ],
   "src/components/shapes/Rectangle.tsx": [
-    "/solid-pages/assets/layout-26e6300a.js"
+    "/solid-pages/assets/layout-1508a82b.js"
   ],
   "src/components/shapes/ShapeInner.tsx": [
   ],
@@ -59,15 +59,15 @@
   "src/root.tsx": [
   ],
   "src/routes/[...404].tsx": [
-    "/solid-pages/assets/_...404_-99a70398.js"
+    "/solid-pages/assets/_...404_-328fd1ec.js"
   ],
   "src/routes/about.tsx": [
-    "/solid-pages/assets/about-eb4ed0fa.js"
+    "/solid-pages/assets/about-423323c6.js"
   ],
   "src/routes/index.tsx": [
-    "/solid-pages/assets/index-d7155781.js"
+    "/solid-pages/assets/index-28fb4490.js"
   ],
   "src/routes/layout.tsx": [
-    "/solid-pages/assets/layout-26e6300a.js"
+    "/solid-pages/assets/layout-1508a82b.js"
   ]
 }
