@@ -2,11 +2,11 @@
   "/*404": [
     {
       "type": "script",
-      "href": "/solid-pages/assets/_...404_-328fd1ec.js"
+      "href": "/solid-pages/assets/_...404_-92552df9.js"
     },
     {
       "type": "script",
-      "href": "/solid-pages/assets/entry-client-c0eea4d4.js"
+      "href": "/solid-pages/assets/entry-client-99d71a6c.js"
     },
     {
       "type": "style",
@@ -16,11 +16,11 @@
   "/about": [
     {
       "type": "script",
-      "href": "/solid-pages/assets/about-423323c6.js"
+      "href": "/solid-pages/assets/about-5a492d85.js"
     },
     {
       "type": "script",
-      "href": "/solid-pages/assets/entry-client-c0eea4d4.js"
+      "href": "/solid-pages/assets/entry-client-99d71a6c.js"
     },
     {
       "type": "style",
@@ -30,11 +30,11 @@
   "/": [
     {
       "type": "script",
-      "href": "/solid-pages/assets/index-28fb4490.js"
+      "href": "/solid-pages/assets/index-5ae7709f.js"
     },
     {
       "type": "script",
-      "href": "/solid-pages/assets/entry-client-c0eea4d4.js"
+      "href": "/solid-pages/assets/entry-client-99d71a6c.js"
     },
     {
       "type": "style",
@@ -44,11 +44,11 @@
   "/layout": [
     {
       "type": "script",
-      "href": "/solid-pages/assets/layout-1508a82b.js"
+      "href": "/solid-pages/assets/layout-00b20d12.js"
     },
     {
       "type": "script",
-      "href": "/solid-pages/assets/entry-client-c0eea4d4.js"
+      "href": "/solid-pages/assets/entry-client-99d71a6c.js"
     },
     {
       "type": "style",
@@ -58,7 +58,7 @@
   "entry-client": [
     {
       "type": "script",
-      "href": "/solid-pages/assets/entry-client-c0eea4d4.js"
+      "href": "/solid-pages/assets/entry-client-99d71a6c.js"
     },
     {
       "type": "style",
