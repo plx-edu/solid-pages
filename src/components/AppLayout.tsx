@@ -32,7 +32,7 @@ export default function AppLayout(props: any) {
       onTouchEnd={(e) => {
         setTouchEnd(e.changedTouches[0].clientX);
         
-        const newSwipeDistance = touchStart() - touchEnd();
+        const newSwipeDistance = Math.floor(touchStart() - touchEnd());
         if (newSwipeDistance > SWIPE_DISTANCE || newSwipeDistance < -SWIPE_DISTANCE) {
           // in the rare cases where the swipe distance
           // is exactly the same as the previous swipe
