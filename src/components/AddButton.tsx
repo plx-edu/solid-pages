@@ -81,7 +81,7 @@ export default function AddButton(props:  {children: any, hasBorder?: boolean, b
         w-full h-full relative
         text-gray-200 hover:text-gray-300 hover:font-extrabold
         bg-center bg-cover bg-no-repeat
-        transition-transform duration-500 hover:scale-110 hue-rotate-30 hover:hue-rotate-0`}
+        transition-all duration-500 hover:scale-110 blur-[2px] hue-rotate-15 hover:blur-none hover:hue-rotate-0`}
         style={bgImage() && {"background-image": "url('"+bgImage()+"')"}}
         >
         
