@@ -20,6 +20,15 @@ export default function AppLayout(props: any) {
       : "text-gray-500 hover:text-gray-800 hover:border-l-gray-800"
   };
 
+  const swipeDebug = () => {
+    return (
+      <div id="swipe-debug" class="fixed top-0.5 right-0.5 p-0.5 text-xs text-right backdrop-blur-lg">
+        <p class="bg-slate-50 bg-opacity-25">{(swipeDistance() > SWIPE_DISTANCE || swipeDistance() < -SWIPE_DISTANCE) && `swiped ${swipeDistance() > 0 ? 'left':'right'}`}</p>
+        <p class="bg-slate-50 bg-opacity-25">{(swipeDistance() > SWIPE_DISTANCE || swipeDistance() < -SWIPE_DISTANCE) && `distance ${swipeDistance()}`}</p>
+      </div>
+    );
+  };
+
   return (
     <section class="
       w-screen
@@ -65,11 +74,7 @@ export default function AppLayout(props: any) {
         </div>
       </section>}
 
-      <div id="swipe-debug" class="fixed top-0.5 right-0.5 p-0.5 text-xs text-right backdrop-blur-lg">
-        <p class="bg-slate-50 bg-opacity-25">{(swipeDistance() > SWIPE_DISTANCE || swipeDistance() < -SWIPE_DISTANCE) && `swiped ${swipeDistance() > 0 ? 'left':'right'}`}</p>
-        <p class="bg-slate-50 bg-opacity-25">{(swipeDistance() > SWIPE_DISTANCE || swipeDistance() < -SWIPE_DISTANCE) && `distance ${swipeDistance()}`}</p>
-      </div>
-
+      {/* {swipeDebug()} */}
 
       <nav class="flex flex-col z-50
         self-center fixed bottom-1.5">
