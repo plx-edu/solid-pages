@@ -180,7 +180,7 @@ export default function Layout() {
             </Rectangle>
           </div>
         
-        <div class="absolute bottom-1 right-1 flex justify-center">
+        <div class="absolute bottom-2 right-2 flex justify-center">
           <input type="checkbox" id="toggle" class="opacity-10"
             onChange={(e) => setIsPlaceholderBgVisible(e.currentTarget.checked)}/>
         </div>
