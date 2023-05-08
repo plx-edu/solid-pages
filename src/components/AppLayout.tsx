@@ -16,7 +16,7 @@ export default function AppLayout(props: any) {
   const location = useLocation();
   const active = (path: string) => {
     return "/solid-pages"+path === location.pathname || "/solid-pages/"+path === location.pathname
-      ? "text-gray-600 hover:text-gray-700 bg-gray-800- bg-gradient-to-b from-gray-700 to-gray-800"
+      ? "text-gray-600 bg-gradient-to-b from-gray-700 to-gray-800"
       : "text-gray-500 hover:text-gray-800 hover:border-l-gray-800"
   };
 
@@ -34,7 +34,15 @@ export default function AppLayout(props: any) {
         
         const newSwipeDistance = touchStart() - touchEnd();
         if (newSwipeDistance > SWIPE_DISTANCE || newSwipeDistance < -SWIPE_DISTANCE) {
-          setSwipeDistance(newSwipeDistance);
+          // in the rare cases where the swipe distance
+          // is exactly the same as the previous swipe
+          if (newSwipeDistance === swipeDistance()){
+            newSwipeDistance > 0
+              ? setSwipeDistance(newSwipeDistance + 1)
+              : setSwipeDistance(newSwipeDistance - 1);
+          }else {
+            setSwipeDistance(newSwipeDistance);
+          }
         }
       }}
     >
