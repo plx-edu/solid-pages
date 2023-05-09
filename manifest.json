@@ -13,12 +13,12 @@
       "src/routes/index.tsx",
       "src/routes/layout.tsx"
     ],
-    "file": "assets/entry-client-b8e85c04.js",
+    "file": "assets/entry-client-d412dd9c.js",
     "isEntry": true,
     "src": "src/entry-client.tsx"
   },
   "src/routes/[...404].tsx": {
-    "file": "assets/_...404_-cbd7dc6a.js",
+    "file": "assets/_...404_-5ae8b131.js",
     "imports": [
       "src/entry-client.tsx"
     ],
@@ -26,7 +26,7 @@
     "src": "src/routes/[...404].tsx"
   },
   "src/routes/about.tsx": {
-    "file": "assets/about-8dd3094b.js",
+    "file": "assets/about-912168d4.js",
     "imports": [
       "src/entry-client.tsx"
     ],
@@ -34,7 +34,7 @@
     "src": "src/routes/about.tsx"
   },
   "src/routes/index.tsx": {
-    "file": "assets/index-13e0a831.js",
+    "file": "assets/index-5453577a.js",
     "imports": [
       "src/entry-client.tsx"
     ],
@@ -42,7 +42,7 @@
     "src": "src/routes/index.tsx"
   },
   "src/routes/layout.tsx": {
-    "file": "assets/layout-74ebf0a5.js",
+    "file": "assets/layout-edfc2bf7.js",
     "imports": [
       "src/entry-client.tsx"
     ],
