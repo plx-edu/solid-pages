@@ -43,7 +43,7 @@ export default function AddButton(props:  {children: any, hasBorder?: boolean, b
 
   const PlusSVG = () => {return (
     <button class="opacity-10 mix-blend-exclusion"
-      onClick={(e) => {
+      onDblClick={(e) => {
         setIsInputVisible(!isInputVisible());
         e.stopPropagation();
       }}
