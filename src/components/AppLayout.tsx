@@ -10,7 +10,7 @@ export default function AppLayout(props: any) {
   const [touchStart, setTouchStart] = createSignal(0);
   const [touchEnd, setTouchEnd] = createSignal(0);
   const [swipeDistance, setSwipeDistance] = createSignal(0);
-  const [isMenuVisible, setIsMenuVisible] = createSignal(true);
+  const [isMenuVisible, setIsMenuVisible] = createSignal(false);
   const [isSearchVisible, setIsSearchVisible] = createSignal(false);
   
   const location = useLocation();
