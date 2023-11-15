@@ -1,15 +1,9 @@
 import Square from "../components/shapes/Square";
 import { createContext, createEffect, createSignal, on, useContext } from "solid-js";
 
-export const PlaceholderBGContext = createContext<any>();
-
 const boxPadding = "p-0.5";
 
-
 export default function projectI() {
-  const [orderList, setOrderList] = createSignal<number[]>([]);
-  const [isPlaceholderBgVisible, setIsPlaceholderBgVisible] = createSignal(false);
-  
   const arr = [...Array(9).keys()];
 
   const Cube = () => {
@@ -35,7 +29,6 @@ export default function projectI() {
     </div>
     )
   }
-
 
   return (
     <div id="here" class="h-screen w-full flex justify-center items-center">
