@@ -1,5 +1,4 @@
 import { A } from "solid-start";
-import Counter from "~/components/Counter";
 
 export default function Home() {
   return (
@@ -16,6 +15,10 @@ export default function Home() {
         {" - "}
         <A href="/layout" class="text-sky-600 hover:underline">
           Layout
+        </A>
+        {" - "}
+        <A href="/projectI" class="text-sky-600 hover:underline">
+          Project I
         </A>
       </p>
     </main>
