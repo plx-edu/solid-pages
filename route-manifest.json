@@ -2,81 +2,81 @@
   "/*404": [
     {
       "type": "script",
-      "href": "/solid-pages/assets/_...404_-630dd11c.js"
+      "href": "/solid-pages/assets/_...404_-dc4f4b80.js"
     },
     {
       "type": "script",
-      "href": "/solid-pages/assets/entry-client-a57f2565.js"
+      "href": "/solid-pages/assets/entry-client-9290e06d.js"
     },
     {
       "type": "style",
-      "href": "/solid-pages/assets/entry-client-1a8618e2.css"
+      "href": "/solid-pages/assets/entry-client-9a20ae31.css"
     }
   ],
   "/about": [
     {
       "type": "script",
-      "href": "/solid-pages/assets/about-de4f826b.js"
+      "href": "/solid-pages/assets/about-1e0880fd.js"
     },
     {
       "type": "script",
-      "href": "/solid-pages/assets/entry-client-a57f2565.js"
+      "href": "/solid-pages/assets/entry-client-9290e06d.js"
     },
     {
       "type": "style",
-      "href": "/solid-pages/assets/entry-client-1a8618e2.css"
+      "href": "/solid-pages/assets/entry-client-9a20ae31.css"
     }
   ],
   "/": [
     {
       "type": "script",
-      "href": "/solid-pages/assets/index-cf9be5cf.js"
+      "href": "/solid-pages/assets/index-914bbf25.js"
     },
     {
       "type": "script",
-      "href": "/solid-pages/assets/entry-client-a57f2565.js"
+      "href": "/solid-pages/assets/entry-client-9290e06d.js"
     },
     {
       "type": "style",
-      "href": "/solid-pages/assets/entry-client-1a8618e2.css"
+      "href": "/solid-pages/assets/entry-client-9a20ae31.css"
     }
   ],
   "/layout": [
     {
       "type": "script",
-      "href": "/solid-pages/assets/layout-8fbfc60b.js"
+      "href": "/solid-pages/assets/layout-d0eec128.js"
     },
     {
       "type": "script",
-      "href": "/solid-pages/assets/entry-client-a57f2565.js"
+      "href": "/solid-pages/assets/entry-client-9290e06d.js"
     },
     {
       "type": "style",
-      "href": "/solid-pages/assets/entry-client-1a8618e2.css"
+      "href": "/solid-pages/assets/entry-client-9a20ae31.css"
     }
   ],
   "/projectI": [
     {
       "type": "script",
-      "href": "/solid-pages/assets/projectI-8af3093e.js"
+      "href": "/solid-pages/assets/projectI-7215893d.js"
     },
     {
       "type": "script",
-      "href": "/solid-pages/assets/entry-client-a57f2565.js"
+      "href": "/solid-pages/assets/entry-client-9290e06d.js"
     },
     {
       "type": "style",
-      "href": "/solid-pages/assets/entry-client-1a8618e2.css"
+      "href": "/solid-pages/assets/entry-client-9a20ae31.css"
     }
   ],
   "entry-client": [
     {
       "type": "script",
-      "href": "/solid-pages/assets/entry-client-a57f2565.js"
+      "href": "/solid-pages/assets/entry-client-9290e06d.js"
     },
     {
       "type": "style",
-      "href": "/solid-pages/assets/entry-client-1a8618e2.css"
+      "href": "/solid-pages/assets/entry-client-9a20ae31.css"
     }
   ],
   "index.html": []
