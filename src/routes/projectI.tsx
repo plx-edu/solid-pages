@@ -5,38 +5,36 @@ const boxPadding = "p-0.5";
 
 export default function projectI() {
   const [gridSize, setGridSize] = createSignal(9);
-  const arr = [...Array(gridSize()).keys()];
-  // const arr = [...Array(9).keys()];
+  
+  function getArr(){
+    return [...Array(gridSize()).keys()];
+  }
 
   const Cube = () => {
     const [n, setN] = createSignal(0)
-    const [cellColor, setCellColor] = createSignal("bg-slate-200")
 
-    function setColor(){
-      setN(n() + 1);
-
-      switch(n()){
+    function setColor(n: number){
+      switch(n){
         case 1:
-          setCellColor("bg-slate-500");
+          return "bg-slate-500";
           break;
         case 2:
-            setCellColor("bg-indigo-200");
+            return "bg-indigo-200";
             break;
         case 3:
-          setCellColor("bg-indigo-300");
+          return "bg-indigo-300";
           break;
         default:
           setN(0);
-          setCellColor("bg-slate-200");
+          return "bg-slate-200";
           break;
       }
     }
 
-
-
     return (
-      <button class={`w-full h-full ${cellColor()}`} 
-        ondblclick={() => setColor()}
+      <button class={`w-full h-full ${setColor(n())}`} 
+        onclick={() => setN(n() + 1)}
+        ondblclick={() => setN(0)}
       >
       </button>
     )
@@ -45,7 +43,7 @@ export default function projectI() {
   const Row = () => {
     return (
     <div class="flex flex-row">
-      { arr.map((_item, index) => {
+      { getArr().map((_item, index) => {
         return (
           <Square innerClass={boxPadding} key={index} isRatioVisible={false}>
             <Cube></Cube>
@@ -57,18 +55,20 @@ export default function projectI() {
   }
 
   return (
-    <>
-    <div id="here" class="h-screen w-full flex justify-center items-center">
+    <div id="here" class="h-screen w-full flex flex-col gap-4 justify-center items-center">
       <Square innerClass={boxPadding} isRatioVisible={false}>
-        { arr.map((_item, index) => {
+        { getArr().map((_item, index) => {
           return <Row></Row>
         })}
       </Square>
+
+      <div class="flex justify-center">
+        <input type="number"
+          class="w-16 text-center" 
+          min={3} max={12}
+          value={gridSize()}
+          onChange={e => setGridSize(Number(e.target.value))}/>
+      </div>
     </div>
-    {/* <div class="bg-slate-400">
-      <input type="number" name="gridSizeSetter" id="" min={3} max={12}
-      onChange={e => setGridSize(Number(e.target.value))}/>
-    </div> */}
-    </>
   );
 }
