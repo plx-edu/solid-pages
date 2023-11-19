@@ -43,6 +43,7 @@ export default function projectI() {
         onclick={() => setN(n() + 1)}
         ondblclick={() => setN(0)}
         onMouseEnter={() => dragChange()}
+        onDragEnter={() => dragChange()}
       >
       </button>
     )
@@ -53,6 +54,8 @@ export default function projectI() {
     <div class="flex flex-row"
       onMouseDown={() => setIsPressed(true)}
       onMouseUp={() => setIsPressed(false)}
+      onTouchStart={() => setIsPressed(true)}
+      onTouchEnd={() => setIsPressed(false)}
     >
       { getArr().map((_item, index) => {
         return (
