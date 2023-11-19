@@ -15,21 +15,22 @@ export default function projectI() {
     const [n, setN] = createSignal(0)
 
     function setColor(n: number){
+      let color = "bg-slate-200";
       switch(n){
         case 1:
-          return "bg-slate-500";
+          color = "bg-slate-500";
           break;
         case 2:
-          return "bg-indigo-200";
+          color = "bg-indigo-200";
           break;
         case 3:
-          return "bg-indigo-300";
+          color = "bg-indigo-300";
           break;
         default:
           setN(0);
-          return "bg-slate-200";
           break;
       }
+      return color
     }
 
     function dragChange(){
@@ -43,7 +44,6 @@ export default function projectI() {
         onclick={() => setN(n() + 1)}
         ondblclick={() => setN(0)}
         onMouseEnter={() => dragChange()}
-        onPointerEnter={() => dragChange()}
       >
       </button>
     )
@@ -54,8 +54,6 @@ export default function projectI() {
     <div class="flex flex-row"
       onMouseDown={() => setIsPressed(true)}
       onMouseUp={() => setIsPressed(false)}
-      onTouchStart={() => setIsPressed(true)}
-      onTouchEnd={() => setIsPressed(false)}
     >
       { getArr().map((_item, index) => {
         return (
