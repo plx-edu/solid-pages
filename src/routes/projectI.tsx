@@ -4,6 +4,7 @@ import { createContext, createEffect, createSignal, on, useContext } from "solid
 const boxPadding = "p-0.5";
 
 export default function projectI() {
+  const [isPressed, setIsPressed] = createSignal(false)
   const [gridSize, setGridSize] = createSignal(9);
   
   function getArr(){
@@ -19,8 +20,8 @@ export default function projectI() {
           return "bg-slate-500";
           break;
         case 2:
-            return "bg-indigo-200";
-            break;
+          return "bg-indigo-200";
+          break;
         case 3:
           return "bg-indigo-300";
           break;
@@ -31,10 +32,17 @@ export default function projectI() {
       }
     }
 
+    function dragChange(){
+      if(isPressed()){
+        n() > 0 ? setN(0) : setN(1);
+      }
+    }
+
     return (
       <button class={`w-full h-full ${setColor(n())}`} 
         onclick={() => setN(n() + 1)}
         ondblclick={() => setN(0)}
+        onMouseEnter={() => dragChange()}
       >
       </button>
     )
@@ -42,7 +50,10 @@ export default function projectI() {
 
   const Row = () => {
     return (
-    <div class="flex flex-row">
+    <div class="flex flex-row"
+      onMouseDown={() => setIsPressed(true)}
+      onMouseUp={() => setIsPressed(false)}
+    >
       { getArr().map((_item, index) => {
         return (
           <Square innerClass={boxPadding} key={index} isRatioVisible={false}>
@@ -67,7 +78,12 @@ export default function projectI() {
           class="w-16 text-center" 
           min={3} max={12}
           value={gridSize()}
-          onChange={e => setGridSize(Number(e.target.value))}/>
+          onChange={e => {
+            const x = Number(e.target.value);
+            if(x >= 3 && x <= 12){
+              setGridSize(x);
+            }
+          }}/>
       </div>
     </div>
   );
