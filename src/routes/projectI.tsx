@@ -43,7 +43,7 @@ export default function projectI() {
         onclick={() => setN(n() + 1)}
         ondblclick={() => setN(0)}
         onMouseEnter={() => dragChange()}
-        onDragEnter={() => dragChange()}
+        onPointerEnter={() => dragChange()}
       >
       </button>
     )
